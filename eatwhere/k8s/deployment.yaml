@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eatwhere-deployment
+spec:
+  replicas: 3 # Number of replicas to run (adjust as needed)
+  selector:
+    matchLabels:
+      app: eatwhere
+  template:
+    metadata:
+      labels:
+        app: eatwhere
+    spec:
+      containers:
+        - name: fast-search
+          image: gcr.io/eatwhere-402410/fast-search-service:latest
+          ports:
+            - containerPort: 8080
+          command: ["node", "src/server.js"]
+
+        - name: random-generator
+          image: gcr.io/eatwhere-402410/random-food-location-service:latest
+          ports:
+            - containerPort: 8080
+          command: ["node", "src/server.js"]
