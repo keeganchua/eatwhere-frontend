@@ -1,0 +1,191 @@
+/* App.css */
+body {
+    background-color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Sigmar One, sans-serif;
+}
+
+p {
+    font-family: Lobster, sans-serif;
+}
+
+.top-bar-container {
+    content: "";
+    background-color: #FA8072;
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Move the overlay behind other content */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the bottom */
+}
+
+.top-bar-title {
+    font-size: 200%;
+    margin-top: 0.5%; /* Shift up & down */
+    margin-left: 1%; /* Shift left & right */
+    color: white;
+}
+
+.content-container {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.content-title {
+    text-align: center;
+    font-size: 500%;
+    margin-bottom: -10%;
+    color: #FA8072;
+}
+
+.content-subtitle {
+    text-align: center;
+    font-family: Lobster, sans-serif;
+    font-size: 200%;
+    color: #CD5C5C;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 5%;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1.5s ease-in-out 1.5s forwards; /* Delay of 1.5s, then fade in over 1.5s */
+}
+
+    .button-container button {
+        font-size: 80%;
+        padding: 0.1% 2%; /* Adjust padding as needed */
+        background-color: #FA8072;
+        color: white; /* Text color */
+        border: none; /* Remove border */
+        border-radius: 7%; /* Add border radius for rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    }
+
+        .button-container button:hover {
+            background-color: #CD5C5C;
+        }
+
+.singapore-flag-size {
+    width: 8%; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nasilemak-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 17%; /* Adjust the top position */
+    left: 12%; /* Adjust the left position */
+}
+
+.asamfish-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 77%; /* Adjust the top position */
+    left: 75%; /* Adjust the left position */
+}
+
+.charkuetiao-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 78%; /* Adjust the top position */
+    left: 12%; /* Adjust the left position */
+}
+
+.laksa-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 45%; /* Adjust the top position */
+    left: 12%; /* Adjust the left position */
+}
+
+.rotiprata-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 45%; /* Adjust the top position */
+    left: 75%; /* Adjust the left position */
+}
+
+.satay-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 15%; /* Adjust the top position */
+    left: 75%; /* Adjust the left position */
+}
+
+.kopibing-positioned {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 40%; /* Adjust the top position */
+    left: 10%; /* Adjust the left position */
+}
+
+.currypuff-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 80%; /* Adjust the top position */
+    left: 33%; /* Adjust the left position */
+}
+
+.grandmapancake-positioned {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: fixed;
+    top: 77%; /* Adjust the top position */
+    left: 52%; /* Adjust the left position */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+/* Media query for screens smaller than 600px (typical mobile screens) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
